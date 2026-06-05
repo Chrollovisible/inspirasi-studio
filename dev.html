@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hehe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .coming-soon-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(26, 86, 219, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
+        }
+
+        .coming-soon-image {
+            max-width: 300px;
+            width: 100%;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .coming-soon-message {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .coming-soon-emoji {
+            font-size: 2rem;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .coming-soon-desc {
+            font-size: 1rem;
+            color: var(--gray-600);
+            max-width: 400px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .coming-soon-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            background: var(--blue-mid);
+            color: var(--white);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+
+        .coming-soon-btn:hover {
+            background: var(--blue);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .coming-soon-container {
+                padding: 1.5rem 1rem;
+                padding-top: 80px;
+            }
+
+            .coming-soon-image {
+                max-width: 250px;
+                margin-bottom: 1.5rem;
+            }
+
+            .coming-soon-message {
+                font-size: 1.5rem;
+            }
+
+            .coming-soon-desc {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .coming-soon-container {
+                padding: 1rem 0.8rem;
+                padding-top: 70px;
+            }
+
+            .coming-soon-image {
+                max-width: 200px;
+                margin-bottom: 1rem;
+            }
+
+            .coming-soon-message {
+                font-size: 1.3rem;
+            }
+
+            .coming-soon-desc {
+                font-size: 0.9rem;
+            }
+
+            .coming-soon-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="coming-soon-container">
+    <img src="aset/future.jpg" alt="Coming Soon" class="coming-soon-image" onerror="this.style.display='none'">
+    <div class="coming-soon-message">
+        <span class="coming-soon-emoji">😄</span>
+        Fitur ini belum jadi hehe
+    </div>
+    <p class="coming-soon-desc">
+        Tunggu update selanjutnya yaa, Kami sedang bekerja keras untuk menghadirkan fitur ini secepat mungkin. HEHE
+    </p>
+    <a href="index.html" class="coming-soon-btn">
+        Balik ke web
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+</div>
+
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+</script>
+
+</body>
+</html>
